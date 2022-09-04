@@ -1,0 +1,11 @@
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/bin/Debug/js-sample-ga-writter-mvc.deps.json
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/bin/Debug/js-sample-ga-writter-mvc.runtimeconfig.json
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/bin/Debug/appsettings.Development.json
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/bin/Debug/appsettings.json
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/bin/Debug/js-sample-ga-writter-mvc.staticwebassets.runtime.json
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/bin/Debug/js-sample-ga-writter-mvc
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/bin/Debug/js-sample-ga-writter-mvc.dll
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/bin/Debug/js-sample-ga-writter-mvc.pdb
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/obj/Debug/docker-compose.dcproj.AssemblyReference.cache
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
+/Users/olhalahutina/Documents/GitHub/js-google-analytic-sample/obj/Debug/docker-compose.dcproj.CopyComplete

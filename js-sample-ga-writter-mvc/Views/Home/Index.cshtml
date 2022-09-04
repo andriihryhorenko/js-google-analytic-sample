@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<html>
+<head>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+                //https://v6.exchangerate-api.com/v6/cb04f8369883a904ff8693c0/latest/USD
+            });
+
+
+            function sendRequests(){
+                var apiKey= document.getElementById('exchange-api-key');
+                var errorContainer = document.getElementById('logError');
+                errorContainer.innerHTML='';
+
+                var infoContainer = document.getElementById('logInfo');
+                infoContainer.innerHTML='';
+
+                if(!apiKey){
+                    errorContainer.innerHTML="ApiKey is empty";
+                    return;
+                }
+
+                var delay= document.getElementById('delay');
+                if(!delay){
+                    errorContainer.innerHTML="Delay is empty";
+                    return;
+                }
+
+                infoContainer.innerHTML="Loading...";
+                fetch('https://v6.exchangerate-api.com/v6/'+apiKey.value+'/latest/USD')
+                .then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    rates = data.conversion_rates;
+                    var text='Rates USD:<br/>';
+                    text+='PLN:  '+rates.PLN+'<br/>'
+                    text +='UAH: ' + rates.UAH+'<br/>'
+                    text+='EUR:  '+rates.EUR+'<br/>'
+
+                    infoContainer.innerHTML=text;
+
+                    for (let i = 1; i <= 10; i++) {
+                        setTimeout(function timer() {
+                            gtag('event', 'currency_rate'  , {
+                                'event_category': 'general',
+                                'event_label': 'USD/PLN',
+                                'value': rates.PLN
+                            });
+                            gtag('event', 'currency_rate'  , {
+                                'event_category': 'general',
+                                'event_label': 'USD/UAH',
+                                'value': rates.UAH
+                            });
+                            gtag('event', 'currency_rate'  , {
+                                'event_category': 'general',
+                                'event_label': 'USD/EUR',
+                                'value': rates.EUR
+                            });
+
+                            var innerText = infoContainer.innerHTML;
+                            innerText+='Sent to GA '+i+' times (delay '+delay.value+' seconds)<br/>'
+                            infoContainer.innerHTML=innerText;
+
+                        }, i * delay.value*100);
+                    }
+
+
+                }).catch(function (err) {
+                    infoContainer.innerHTML='';
+                    errorContainer.innerHTML=err;
+                });
+
+
+
+            }</script>
+</head>
+<body>
+    <h1>Google Analytic Event Writter</h1>
+    <div>
+        <h3>Configuration:</h3>
+        <table>
+            <tr><td><span>Exchange-API Key</span></td><td><input type="text" id="exchange-api-key" value="cb04f8369883a904ff8693c0" /></td>
+    </div>
+    <tr><div><td><span>10 requests with </span></td><td><input type="number" id="delay" value="10" step="1" min="5" max="60" /> seconds delay</td></div></tr>
+    <tr><div><td><span id="logError" style="color:red"> </span></td></tr>
+    <tr><div><td><span id="logInfo" style="color:green"> </span></td></tr>
+    </table>
+
+    <button onclick="sendRequests()">Send 10 requests</button>
+    </div>
+</body>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L1FMT7FH8C"></script>
+<script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-L1FMT7FH8C', {send_page_view: false});</script>
+</html>

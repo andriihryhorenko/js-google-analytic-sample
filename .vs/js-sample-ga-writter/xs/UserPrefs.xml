@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{CAC3647B-51AE-4CB2-8A01-3C14C07A103E}|Default">
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.js-sample-ga-writter-mvc PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../123123/Views/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="docker-compose.override.yml" Line="9" Column="1" />
+      <File FileName="js-sample-ga-writter-mvc/appsettings.json" Line="1" Column="1" />
+      <File FileName="js-sample-ga-writter-mvc/Views/Home/Index.cshtml" Line="5" Column="1" />
+      <File FileName="js-sample-ga-writter-mvc/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="../123123/Views/Shared/_Layout.cshtml" Line="29" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="js-sample-ga-writter" expanded="True">
+            <Node name="123123" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="docker-compose" expanded="True">
+              <Node name="docker-compose.yml" expanded="True" />
+            </Node>
+            <Node name="js-sample-ga-writter-mvc" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

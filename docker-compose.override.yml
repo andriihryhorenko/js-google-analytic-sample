@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  js-sample-ga-writter-mvc:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8124:80"

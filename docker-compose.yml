@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  js-sample-ga-writter-mvc:
+    image: ${DOCKER_REGISTRY-}jssamplegawrittermvc
+    build:
+      context: .
+      dockerfile: js-sample-ga-writter-mvc/Dockerfile
+    ports:
+      - "8124:80"
+
+
